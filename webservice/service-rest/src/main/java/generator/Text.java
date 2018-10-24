@@ -1,6 +1,6 @@
 package generator;
 
-public class Text {
+public class Text{
     private final long id;
     private final String content;
     

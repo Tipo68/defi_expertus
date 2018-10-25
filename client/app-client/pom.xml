@@ -25,6 +25,12 @@
       <artifactId>spring-webmvc</artifactId>
       <version>4.0.2.RELEASE</version>
     </dependency>
+	<dependency>
+	    <groupId>org.webjars</groupId>
+	    <artifactId>bootstrap</artifactId>
+	    <version>4.1.0</version>
+	</dependency>
+    
   </dependencies>
   <build>
     <finalName>app-client</finalName>

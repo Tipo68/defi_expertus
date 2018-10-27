@@ -21,8 +21,7 @@
 		<div class="header row">
 			<h1 class="display-1 expertus-title">Hello Expertus</h1>
 		</div>
-		<a href="#" id="generateText" class="btn btn-primary btn-lg active" role="button">Générer un texte</a>
-
+		<button id="generateText" type="button" class="btn btn-primary">Générer un texte</button>
 		<div class="generation-area row">
 
 			<div class="col-sm-2">

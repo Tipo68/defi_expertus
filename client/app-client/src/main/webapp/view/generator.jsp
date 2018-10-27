@@ -6,21 +6,26 @@
 <html>
 <head>
 
+<spring:url value="/resources/css/generator.css" var="style" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="${style}" />
 
 </head>
 <head>
-<title>${personne}</title>
+<title>${title}</title>
 </head>
 <body>
-	<div class="container">
-
-		<button id="generateText">Générer un texte</button>
+	<div class="container-fluid">
+		<div class="header row">
+			<h1 class="display-1 expertus-title">Hello Expertus</h1>
+		</div>
+		<a href="#" id="generateText" class="btn btn-primary btn-lg active" role="button">Générer un texte</a>
 
 		<div class="generation-area row">
 
-			<div class="col-sm">
+			<div class="col-sm-2">
 				<div class="id-text"></div>
 			</div>
 			<div class="col-sm">

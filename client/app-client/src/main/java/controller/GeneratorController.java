@@ -11,7 +11,7 @@ public class GeneratorController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String afficherBonjour(final ModelMap pModel) {
-        pModel.addAttribute("personne", "Expertus");
+        pModel.addAttribute("title", "Generator");
         return "generator";
     }
 }

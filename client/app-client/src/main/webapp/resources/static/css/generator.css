@@ -1,0 +1,22 @@
+.generation-area{
+	border: 1px solid black;
+}
+
+.expertus-title{
+	background-color: #273c75;
+    color: #f5f6fa;
+    font-style: italic;
+    padding: 20px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.header{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+body{
+	background-color: #f5f6fa;
+}

@@ -9,8 +9,7 @@
 <spring:url value="/resources/css/generator.css" var="style" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
-<link rel="stylesheet"
-	href="${style}" />
+<link rel="stylesheet" href="${style}" />
 
 </head>
 <head>
@@ -19,11 +18,26 @@
 <body>
 	<div class="container-fluid">
 		<div class="header row">
-			<h1 class="display-1 expertus-title">Hello Expertus</h1>
+			<h1 class="display-1 expertus-title">Hello Expertus !</h1>
 		</div>
-		<button id="generateText" type="button" class="btn btn-primary">Générer un texte</button>
-		<div class="generation-area row">
+		<button id="getFullText" type="button" class="btn btn-secondary float-right">Voir le texte original</button>
+		<div class="form-row">
+			<div class="col-auto">
+				<button id="generateText" type="button" class="btn btn-primary">Générer	une liste</button>
+			</div>	
+			<div class="col-auto">
+				<select id="text-size" class="form-control">
+					<option value="200" selected>Nombre de mots ?</option>
+					<option value="100">100 mots</option>
+					<option value="200">200 mots</option>
+					<option value="300">300 mots</option>
+					<option value="400">400 mots</option>
+					<option value="500">500 mots</option>
+				</select>
+			</div>
+		</div>
 
+		<div class="generation-area row">
 			<div class="col-sm-2">
 				<div class="id-text"></div>
 			</div>
@@ -32,7 +46,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<spring:url value="/resources/js/generator.js" var="generator" />
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

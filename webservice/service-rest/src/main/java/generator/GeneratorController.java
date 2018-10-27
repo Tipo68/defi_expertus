@@ -13,17 +13,31 @@ public class GeneratorController {
 
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping(value = "/generator", method = RequestMethod.GET)
-    public Text generator(@RequestParam(value="name", defaultValue="Expertus") String name) throws IOException {
+    @RequestMapping(value = "/get-text", method = RequestMethod.GET)
+    public Text getText() throws IOException {
     	Text text = new Text(counter.incrementAndGet());
-    	text.createContent();
+    	text.getText();
         return text;
     }
     
     @RequestMapping(value = "/generator", method = RequestMethod.POST)
+    public Text generator(@RequestParam(value="size") int size) throws IOException {
+    	Text text = new Text(counter.incrementAndGet());
+    	text.createContent(size);
+        return text;
+    }
+    
+    @RequestMapping(value = "/sort", method = RequestMethod.POST)
     public Text sort(@RequestParam(value="content", defaultValue="Expertus") String content, @RequestParam(value="order", defaultValue="up") String order) throws IOException {
     	Text text = new Text(0, content);
     	text.sortContent(order);
+        return text;
+    }
+    
+    @RequestMapping(value = "/sortAlph", method = RequestMethod.POST)
+    public Text sortAlph(@RequestParam(value="content", defaultValue="Expertus") String content) throws IOException {
+    	Text text = new Text(0, content);
+    	text.sortContentAlph();
         return text;
     }
 }

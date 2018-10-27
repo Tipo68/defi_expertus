@@ -1,5 +1,11 @@
-.generation-area{
-	border: 1px solid black;
+
+body{
+	background-color: #f5f6fa;
+}
+
+.header{
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 .expertus-title{
@@ -12,11 +18,68 @@
     margin-bottom: 0;
 }
 
-.header{
-    margin-bottom: 50px;
-    text-align: center;
+#generateText{
+	margin-left: 20px;
+	min-width: 146px;
 }
 
-body{
-	background-color: #f5f6fa;
+#sortUp{
+	margin-right: 20px;
+	min-width:122px;
+	margin-bottom: 50px;
+}
+
+#getFullText{
+	margin-right: 20px;
+	min-width:168px;
+}
+
+#sortAlph{
+	margin-right: 20px;
+	min-width: 222px;
+}
+
+.generation-area{
+    padding: 10px;
+    text-align: justify;
+    margin: 20px;
+}
+
+.id-text:empty .generation-area{
+   display: none;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

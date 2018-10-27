@@ -3,7 +3,13 @@ package generator;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
 
 import org.springframework.core.io.ClassPathResource;
 
@@ -31,7 +37,7 @@ public class Text implements IText{
 	}
 	
 	@Override
-	public void createContent() throws IOException {   // Methode pour générer le text random
+	public void createContent(int size) throws IOException {   // Methode pour générer le text random
     	File resource = new ClassPathResource("words_list.txt").getFile();
     	ArrayList<String> result = new ArrayList<>();
     	 
@@ -40,7 +46,7 @@ public class Text implements IText{
     	    while (f.ready()) {
     	        char c = (char) f.read();
     	        if (c == ' ') {
-    	            result.add(sb.toString().replaceAll("[!.,()-:?;]", "").toLowerCase());
+    	            result.add(sb.toString().replaceAll("[!.,():?;«»1234567890]", "").toLowerCase());
     	            sb = new StringBuffer();
     	        } else {
     	            sb.append(c);
@@ -51,9 +57,11 @@ public class Text implements IText{
     	    }
     	}
     	
-    	for(int i = 0; i < 200; i++) {
-    		int index = (int) (Math.random() * ( 999 - 0 ));
-    		this.content += " "  + result.get(index);
+    	for(int i = 0; i < size; i++) {
+    		int index = (int) (Math.random() * ( 1544 - 0 ));
+    		if(!result.get(index).equals("-")) {
+    			this.content += " "  + result.get(index);
+    		}
     	}
 	}
 
@@ -85,7 +93,23 @@ public class Text implements IText{
 		
 		this.content = "";
     	for(int i = 0; i < contentAr.length; i++) {
-    		this.content += " "  + contentAr[i];
+        	this.content += " "  + contentAr[i];
     	}
+	}
+
+	@Override
+	public void sortContentAlph() {
+		List<String> text = new ArrayList<String>(Arrays.asList(this.content.split(" ")));
+		Collections.sort(text, Collator.getInstance(Locale.FRENCH));
+		this.content = "";
+    	for(int i = 0; i < text.size(); i++) {
+    		this.content += " "  + text.get(i);
+    	}
+	}
+
+	@Override
+	public void getText() throws IOException {
+    	File resource = new ClassPathResource("words_list.txt").getFile();
+    	this.content = new String(Files.readAllBytes(resource.toPath()));
 	}
 }

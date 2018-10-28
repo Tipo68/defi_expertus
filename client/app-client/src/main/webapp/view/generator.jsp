@@ -20,7 +20,16 @@
 		<div class="header row">
 			<h1 class="display-1 expertus-title">Hello Expertus !</h1>
 		</div>
-		<button id="getFullText" type="button" class="btn btn-secondary float-right">Voir le texte original</button>
+		<div class="row">
+			<div class="col">
+				<div class="alert alert-primary" role="alert">
+					<span class="ico">?</span>Cliquez sur "Générer une liste" pour générer une liste de mots à
+					partir d'un texte. <br>Vous pouvez voir ce texte grâce au
+					bouton "Voir le texte original" ci-dessous !
+				</div>
+			</div>
+		</div>
+		<button id="getFullText" type="button" class="btn btn-secondary float-sm-right">Voir le texte original</button>
 		<div class="form-row">
 			<div class="col-auto">
 				<button id="generateText" type="button" class="btn btn-primary">Générer	une liste</button>

@@ -80,7 +80,7 @@ body{
 	margin-bottom: 50px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   #getFullText {
 		margin-left: 20px;
 	}

@@ -20,6 +20,8 @@
 		<div class="header row">
 			<h1 class="display-1 expertus-title">Hello Expertus !</h1>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="col">
 				<div class="alert alert-primary" role="alert">

@@ -40,7 +40,7 @@ public class Text implements IText{
 	public void createContent(int size) throws IOException {   // Methode pour générer le text random
     	File resource = new ClassPathResource("words_list.txt").getFile();
     	ArrayList<String> result = new ArrayList<>();
-    	 
+    	
     	try (FileReader f = new FileReader(resource)) {
     	    StringBuffer sb = new StringBuffer();
     	    while (f.ready()) {

@@ -33,7 +33,7 @@ $(document).ready(function(){
 		});
 	});
 	var order = "up";
-	$(".container-fluid").on("click", "#sortUp", function(){
+	$("body").on("click", "#sortUp", function(){
 		order = order == "up" ? "down" : "up";
 		$.ajax({
 			type: "POST",
@@ -60,7 +60,7 @@ $(document).ready(function(){
 			}
 		});
 	});
-	$(".container-fluid").on("click", "#sortAlph", function(){
+	$("body").on("click", "#sortAlph", function(){
 		$.ajax({
 			type: "POST",
 			dataType: "json",
@@ -85,7 +85,7 @@ $(document).ready(function(){
 			}
 		});
 	});
-	$(".container-fluid").on("click", "#getFullText", function(){
+	$("body").on("click", "#getFullText", function(){
 		$.ajax({
 			type: "GET",
 			dataType: "json",

@@ -6,8 +6,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "generator")
+@ComponentScan(basePackages = {"generator", "exception"})
 public class AppConfig {
      
- 
 }

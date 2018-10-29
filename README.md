@@ -10,10 +10,10 @@ URL de l'interface client : http://localhost:8080/app-client/generator
 
 
 ## URL de communication avec l'API
-Création de la liste de mots : http://localhost:8080/service-rest/rest/generator
+Création de la liste de mots : http://localhost:8080/service-rest/rest/generator         /POST : {"size"}
 
-Tri du texte par taille de mot : http://localhost:8080/service-rest/rest/sort
+Tri du texte par taille de mot : http://localhost:8080/service-rest/rest/sort            /POST : {"content", "order"}
 
-Tri du texte par ordre alphabétique : http://localhost:8080/service-rest/rest/sortAlph
+Tri du texte par ordre alphabétique : http://localhost:8080/service-rest/rest/sortAlph   /POST : {"content"}
 
-Récupération du texte original : http://localhost:8080/service-rest/rest/get-text
+Récupération du texte original : http://localhost:8080/service-rest/rest/get-text        /GET
